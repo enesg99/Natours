@@ -14,9 +14,9 @@ const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSW
 
 mongoose.connect(DB).then(con => { console.log('DB connection successful')})
 
-const port = process.env.PORT ||  3000;
+const PORT = process.env.PORT ||  3000;
 const server = app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+    console.log(`Listening on port ${PORT}`);
 });
 
 process.on('unhandledRejection', (err) => {
